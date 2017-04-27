@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+
+class UrlBuilder {
+    
+    private static let baseUrl = "http://163.172.29.197:8000"
+    
+    static let allEvents: String  = {
+        
+        return baseUrl+"/events"
+}()
+    
+    static func event(eventId: String) -> String {
+        return allEvents+"/\(eventId)"
+    }
+}
+

@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Event {
+class EventTemp {
     
     // structure
-    struct Location {
+    struct LocationTemp {
         var longitude: Double
         var latitude: Double
     }
@@ -23,13 +23,13 @@ class Event {
     var name: String!
     var createdAt : Date!
     var updatedAt : Date!
-    var Location: Location!
+    var Location: LocationTemp!
     
     
     
 }
 
-extension Event {
+extension EventTemp {
     
     convenience init(json: [String: Any]){
         

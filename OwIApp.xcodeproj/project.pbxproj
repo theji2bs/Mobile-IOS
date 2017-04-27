@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CB30CA768162D7AA9D47E80 /* Pods_OwIApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12C761D24557EEA9DC76BD8 /* Pods_OwIApp.framework */; };
+		660376DC1EB22E7A00808540 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376D81EB22E7A00808540 /* Event+CoreDataClass.swift */; };
+		660376DD1EB22E7A00808540 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376D91EB22E7A00808540 /* Event+CoreDataProperties.swift */; };
+		660376DE1EB22E7A00808540 /* EventLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376DA1EB22E7A00808540 /* EventLocation+CoreDataClass.swift */; };
+		660376DF1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376DB1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift */; };
+		660376E11EB22F0000808540 /* EventDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376E01EB22F0000808540 /* EventDao.swift */; };
+		660376E31EB23DC400808540 /* Event+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376E21EB23DC400808540 /* Event+JSON.swift */; };
 		66A0A7DD1EB1DB1200A362F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0A7DC1EB1DB1200A362F5 /* AppDelegate.swift */; };
 		66A0A7DF1EB1DB1200A362F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0A7DE1EB1DB1200A362F5 /* ViewController.swift */; };
 		66A0A7E21EB1DB1200A362F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A0A7E01EB1DB1200A362F5 /* Main.storyboard */; };
 		66A0A7E51EB1DB1200A362F5 /* OwIApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66A0A7E31EB1DB1200A362F5 /* OwIApp.xcdatamodeld */; };
 		66A0A7E71EB1DB1200A362F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A0A7E61EB1DB1200A362F5 /* Assets.xcassets */; };
 		66A0A7EA1EB1DB1200A362F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A0A7E81EB1DB1200A362F5 /* LaunchScreen.storyboard */; };
+		66B30BA21EB1FE3E00CED5AB /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B30BA11EB1FE3E00CED5AB /* DateUtil.swift */; };
+		66D795981EB1E024002DF32E /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D795971EB1E024002DF32E /* EventCollectionViewCell.swift */; };
+		66D7959A1EB1E5B0002DF32E /* EventTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D795991EB1E5B0002DF32E /* EventTemp.swift */; };
+		66D7959C1EB1E913002DF32E /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7959B1EB1E913002DF32E /* EventManager.swift */; };
+		66D7959E1EB1E99F002DF32E /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7959D1EB1E99F002DF32E /* UrlBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BAAFC74CE7BBD4DC46BF01C /* Pods-OwIApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OwIApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OwIApp/Pods-OwIApp.debug.xcconfig"; sourceTree = "<group>"; };
+		240B8FA64007994263577637 /* Pods-OwIApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OwIApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OwIApp/Pods-OwIApp.release.xcconfig"; sourceTree = "<group>"; };
+		660376D81EB22E7A00808540 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataClass.swift"; path = "../Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		660376D91EB22E7A00808540 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataProperties.swift"; path = "../Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		660376DA1EB22E7A00808540 /* EventLocation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EventLocation+CoreDataClass.swift"; path = "../EventLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		660376DB1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EventLocation+CoreDataProperties.swift"; path = "../EventLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		660376E01EB22F0000808540 /* EventDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDao.swift; sourceTree = "<group>"; };
+		660376E21EB23DC400808540 /* Event+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+JSON.swift"; sourceTree = "<group>"; };
 		66A0A7D91EB1DB1200A362F5 /* OwIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OwIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A0A7DC1EB1DB1200A362F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66A0A7DE1EB1DB1200A362F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +44,12 @@
 		66A0A7E61EB1DB1200A362F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66A0A7E91EB1DB1200A362F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66A0A7EB1EB1DB1200A362F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B30BA11EB1FE3E00CED5AB /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		66D795971EB1E024002DF32E /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		66D795991EB1E5B0002DF32E /* EventTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTemp.swift; sourceTree = "<group>"; };
+		66D7959B1EB1E913002DF32E /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		66D7959D1EB1E99F002DF32E /* UrlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
+		C12C761D24557EEA9DC76BD8 /* Pods_OwIApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OwIApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB30CA768162D7AA9D47E80 /* Pods_OwIApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F06E2624379746FA6962D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BAAFC74CE7BBD4DC46BF01C /* Pods-OwIApp.debug.xcconfig */,
+				240B8FA64007994263577637 /* Pods-OwIApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3A14DAF62A85CC1806BBFCD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C12C761D24557EEA9DC76BD8 /* Pods_OwIApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66A0A7D01EB1DB1100A362F5 = {
 			isa = PBXGroup;
 			children = (
 				66A0A7DB1EB1DB1200A362F5 /* OwIApp */,
 				66A0A7DA1EB1DB1200A362F5 /* Products */,
+				09F06E2624379746FA6962D9 /* Pods */,
+				3A14DAF62A85CC1806BBFCD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +102,10 @@
 		66A0A7DB1EB1DB1200A362F5 /* OwIApp */ = {
 			isa = PBXGroup;
 			children = (
+				660376D81EB22E7A00808540 /* Event+CoreDataClass.swift */,
+				660376D91EB22E7A00808540 /* Event+CoreDataProperties.swift */,
+				660376DA1EB22E7A00808540 /* EventLocation+CoreDataClass.swift */,
+				660376DB1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift */,
 				66A0A7DC1EB1DB1200A362F5 /* AppDelegate.swift */,
 				66A0A7DE1EB1DB1200A362F5 /* ViewController.swift */,
 				66A0A7E01EB1DB1200A362F5 /* Main.storyboard */,
@@ -63,6 +113,13 @@
 				66A0A7E81EB1DB1200A362F5 /* LaunchScreen.storyboard */,
 				66A0A7EB1EB1DB1200A362F5 /* Info.plist */,
 				66A0A7E31EB1DB1200A362F5 /* OwIApp.xcdatamodeld */,
+				66D795971EB1E024002DF32E /* EventCollectionViewCell.swift */,
+				66D795991EB1E5B0002DF32E /* EventTemp.swift */,
+				66D7959B1EB1E913002DF32E /* EventManager.swift */,
+				66D7959D1EB1E99F002DF32E /* UrlBuilder.swift */,
+				66B30BA11EB1FE3E00CED5AB /* DateUtil.swift */,
+				660376E01EB22F0000808540 /* EventDao.swift */,
+				660376E21EB23DC400808540 /* Event+JSON.swift */,
 			);
 			path = OwIApp;
 			sourceTree = "<group>";
@@ -74,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66A0A7EE1EB1DB1200A362F5 /* Build configuration list for PBXNativeTarget "OwIApp" */;
 			buildPhases = (
+				3E96F2EE6158FD4DE244326A /* [CP] Check Pods Manifest.lock */,
 				66A0A7D51EB1DB1100A362F5 /* Sources */,
 				66A0A7D61EB1DB1100A362F5 /* Frameworks */,
 				66A0A7D71EB1DB1100A362F5 /* Resources */,
+				96DE4759A2768D9E441E63E6 /* [CP] Embed Pods Frameworks */,
+				95B73AFB218D041044C1D9A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,14 +195,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E96F2EE6158FD4DE244326A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95B73AFB218D041044C1D9A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OwIApp/Pods-OwIApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96DE4759A2768D9E441E63E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OwIApp/Pods-OwIApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		66A0A7D51EB1DB1100A362F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660376DD1EB22E7A00808540 /* Event+CoreDataProperties.swift in Sources */,
+				66D7959C1EB1E913002DF32E /* EventManager.swift in Sources */,
 				66A0A7DF1EB1DB1200A362F5 /* ViewController.swift in Sources */,
+				660376E11EB22F0000808540 /* EventDao.swift in Sources */,
+				66D795981EB1E024002DF32E /* EventCollectionViewCell.swift in Sources */,
 				66A0A7E51EB1DB1200A362F5 /* OwIApp.xcdatamodeld in Sources */,
+				660376DC1EB22E7A00808540 /* Event+CoreDataClass.swift in Sources */,
 				66A0A7DD1EB1DB1200A362F5 /* AppDelegate.swift in Sources */,
+				660376DF1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift in Sources */,
+				66B30BA21EB1FE3E00CED5AB /* DateUtil.swift in Sources */,
+				66D7959E1EB1E99F002DF32E /* UrlBuilder.swift in Sources */,
+				66D7959A1EB1E5B0002DF32E /* EventTemp.swift in Sources */,
+				660376E31EB23DC400808540 /* Event+JSON.swift in Sources */,
+				660376DE1EB22E7A00808540 /* EventLocation+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +382,12 @@
 		};
 		66A0A7EF1EB1DB1200A362F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAAFC74CE7BBD4DC46BF01C /* Pods-OwIApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 99D895TFL2;
 				INFOPLIST_FILE = OwIApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.hetic.OwIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,10 +397,12 @@
 		};
 		66A0A7F01EB1DB1200A362F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 240B8FA64007994263577637 /* Pods-OwIApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 99D895TFL2;
 				INFOPLIST_FILE = OwIApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.hetic.OwIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +429,7 @@
 				66A0A7F01EB1DB1200A362F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
