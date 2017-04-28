@@ -9,6 +9,7 @@ pod 'Alamofire', '~> 4.4'
 
 #SwiftDev
 pod 'HanekeSwift', :git => 'https://github.com/Haneke/HanekeSwift.git', :branch => 'feature/swift-3'
+pod 'SwiftyJSON', '~> 3.1'
 
   # Pods for OwIApp
 

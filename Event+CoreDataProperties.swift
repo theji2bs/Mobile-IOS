@@ -26,3 +26,18 @@ extension Event {
     @NSManaged public var location: EventLocation?
 
 }
+
+extension Event{
+    
+    var isEmpty:Bool {
+        
+        guard let descriptionValue = self.descriptionText, let nameValue = self.name else {
+            
+            return false
+        }
+        
+        
+        return descriptionValue.isEmpty && nameValue.isEmpty
+    }
+}
+

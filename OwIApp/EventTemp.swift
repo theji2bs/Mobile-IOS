@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class EventTemp {
     
@@ -41,10 +42,13 @@ extension EventTemp {
         let name = json["name"] as? String ?? ""
         let id = json["id"] as? String ?? ""
         let imageUrl = json["imageUrl"] as? String ?? ""
+        let information = json["information"] as? String ?? ""
         
         self.name = name
         self.id = id
         self.imageUrl = imageUrl
+        self.information = information
+
         
             if let updatedAtDate = DateUtil.sharedInstance
                 .dateFromString(dateString: updatedAt){
@@ -61,5 +65,38 @@ extension EventTemp {
         
         
 
-}
+} /*
+    func fill(_ json: JSON) {
+        
+        
+        let updatedAt = json["updatedAt"].stringValue
+        let createdAt = json["createdAt"].stringValue
+        let name = json["name"].stringValue
+        let id = json["id"].stringValue
+        let imageUrl = json["imageUrl"].stringValue
+        let information = json["information"].stringValue
+        let description = json["description"].stringValue
+        
+        self.name = name
+        self.id = id
+        self.imageUrl = imageUrl
+        self.description = description
+        self.information = information
+        
+        if let updatedAtDate = DateUtil.sharedInstance
+            .dateFromString(dateString: updatedAt){
+            self.updatedAt = updatedAtDate
+            
+        }
+        
+        
+        if let createdAtDate = DateUtil.sharedInstance
+            .dateFromString(dateString: createdAt){
+            self.updatedAt = createdAtDate
+            
+        }
+        
+
+        
+    }*/
 }

@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import LocalAuthentication
+
+
+
+enum SegueIdentifier: String {
+    case detailEvent = "segue_detail_event"
+}
 
 class ViewController: UIViewController {
+    
     
     lazy var events = [Event]()
 
@@ -17,6 +25,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        // Touchid 
+        
+         let context = LAContext()
+        
+        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Je veux ton doigt"){
+            (success, error) in
+            print("sucess: \(success)")
+            
+            
+            if success {
+                //
+            }
+        }
         
         
         EventManager.retrieveAllEvent(success: { (events) in
@@ -34,7 +58,30 @@ class ViewController: UIViewController {
     }
 
     
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let identifier = segue.identifier, let segueIdentifier = SegueIdentifier(rawValue: identifier) else {
+            fatalError("Segue identifier not recongnized")
+            
+        }
+        switch segueIdentifier {
+        case .detailEvent:
+            let eventDetailViewController = segue.destination as! EventDetailViewController
+            
+            if let indexPaths = mainCollectionView.indexPathsForSelectedItems, let indexPath = indexPaths.first{
+                
+                let eventId = events[indexPath.row].id
+                
+                eventDetailViewController.eventId = eventId
+                
+            }
+            break
+        }
+    }
+    
+    
+    
 
 }
 

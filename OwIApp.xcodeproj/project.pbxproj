@@ -14,6 +14,7 @@
 		660376DF1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376DB1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift */; };
 		660376E11EB22F0000808540 /* EventDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376E01EB22F0000808540 /* EventDao.swift */; };
 		660376E31EB23DC400808540 /* Event+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660376E21EB23DC400808540 /* Event+JSON.swift */; };
+		666C01A11EB3318000FFACB4 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666C01A01EB3318000FFACB4 /* EventDetailViewController.swift */; };
 		66A0A7DD1EB1DB1200A362F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0A7DC1EB1DB1200A362F5 /* AppDelegate.swift */; };
 		66A0A7DF1EB1DB1200A362F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0A7DE1EB1DB1200A362F5 /* ViewController.swift */; };
 		66A0A7E21EB1DB1200A362F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A0A7E01EB1DB1200A362F5 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		660376DB1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EventLocation+CoreDataProperties.swift"; path = "../EventLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		660376E01EB22F0000808540 /* EventDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDao.swift; sourceTree = "<group>"; };
 		660376E21EB23DC400808540 /* Event+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+JSON.swift"; sourceTree = "<group>"; };
+		666C01A01EB3318000FFACB4 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		66A0A7D91EB1DB1200A362F5 /* OwIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OwIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A0A7DC1EB1DB1200A362F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66A0A7DE1EB1DB1200A362F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				660376D81EB22E7A00808540 /* Event+CoreDataClass.swift */,
 				660376D91EB22E7A00808540 /* Event+CoreDataProperties.swift */,
 				660376DA1EB22E7A00808540 /* EventLocation+CoreDataClass.swift */,
+				666C01A01EB3318000FFACB4 /* EventDetailViewController.swift */,
 				660376DB1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift */,
 				66A0A7DC1EB1DB1200A362F5 /* AppDelegate.swift */,
 				66A0A7DE1EB1DB1200A362F5 /* ViewController.swift */,
@@ -254,6 +257,7 @@
 				660376E11EB22F0000808540 /* EventDao.swift in Sources */,
 				66D795981EB1E024002DF32E /* EventCollectionViewCell.swift in Sources */,
 				66A0A7E51EB1DB1200A362F5 /* OwIApp.xcdatamodeld in Sources */,
+				666C01A11EB3318000FFACB4 /* EventDetailViewController.swift in Sources */,
 				660376DC1EB22E7A00808540 /* Event+CoreDataClass.swift in Sources */,
 				66A0A7DD1EB1DB1200A362F5 /* AppDelegate.swift in Sources */,
 				660376DF1EB22E7A00808540 /* EventLocation+CoreDataProperties.swift in Sources */,

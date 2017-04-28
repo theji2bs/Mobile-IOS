@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 
 class EventManager {
@@ -19,6 +20,17 @@ class EventManager {
     
     // equivalent de func method
     typealias FailureEvents = (_ error: Error) -> Void
+    
+    
+    typealias ResultEvent = (_ event: Event) -> Void
+    typealias FailureEvent = FailureEvents
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -50,21 +62,23 @@ class EventManager {
                                     event = eventDao.createEvent()
                                 }
                                 event?.fill(jsonEvent)
-
-                            
-                            if let currentEvent = event {
-                                events.append(currentEvent)
+                                
+                                
+                                if let currentEvent = event {
+                                    events.append(currentEvent)
+                                }
+                                
                             }
                             
-                            }
-                
                             success(events)
+                            // sauvegarde des donnees
+                            eventDao.saveContext()
                             
                         }
                         
                     }
-        
-            
+                    
+                    
                 } catch let error {
                     failure(error)
                     
@@ -84,4 +98,64 @@ class EventManager {
         
         
     }
+    
+    
+    
+    
+    static func retrieveEventDetail(eventId: String, success: @escaping ResultEvent, failure: @escaping FailureEvent){
+        
+        let eventDao = EventDao.sharedInstance
+
+        guard let eventFromDatabase = eventDao.findEvent(eventId: eventId) else {
+            // code réseau
+            let url = UrlBuilder.event(eventId: eventId)
+            Alamofire.request(url).responseData { (response) in
+                switch response.result {
+                    
+                case .success(let value):
+                    
+                    let jsonRoot = JSON(value)
+                    
+                    let jsonEvent = jsonRoot["data"]
+                    
+                    
+                    var event = eventDao.findEvent(eventId: jsonEvent["id"].stringValue)
+                    
+                    if event == nil {
+                        event = eventDao.createEvent()
+                    }
+                    
+                    event?.fill(jsonEvent.dictionaryValue)
+                    
+                    if let currentEvent = event {
+                        success(currentEvent)
+                        
+                        // sauvegarde des donnees
+                        eventDao.saveContext()
+                        
+                    }
+                    
+                    break
+                    
+                    
+                case .failure(let error):
+                    
+                    print("error: \(error)")
+                    
+                    break
+                }
+                
+            }
+            
+            return
+        }
+        
+        success(eventFromDatabase)
+        // code réseaux ici precedemment
+    }
+    
+        
+        
 }
+    
+
