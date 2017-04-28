@@ -79,17 +79,40 @@
                                     <outlet property="prefetchDataSource" destination="BYZ-38-t0r" id="mq2-9T-vdn"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCp-Yn-gtz">
+                                <rect key="frame" x="0.0" y="16" width="375" height="635"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_agency" translatesAutoresizingMaskIntoConstraints="NO" id="5Az-SI-r7Y">
+                                        <rect key="frame" x="67" y="253.5" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="ITn-Sw-rhE"/>
+                                            <constraint firstAttribute="width" constant="240" id="VHc-WN-HfO"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.748046875" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5Az-SI-r7Y" firstAttribute="centerY" secondItem="NCp-Yn-gtz" secondAttribute="centerY" id="AOA-hb-9bF"/>
+                                    <constraint firstItem="5Az-SI-r7Y" firstAttribute="centerX" secondItem="NCp-Yn-gtz" secondAttribute="centerX" id="P6N-mj-NOz"/>
+                                    <constraint firstAttribute="width" secondItem="NCp-Yn-gtz" secondAttribute="height" multiplier="75:127" id="tw0-el-Tsg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="N0o-Y4-Uc6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="GtG-tR-kOu"/>
+                            <constraint firstItem="NCp-Yn-gtz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="IvQ-NN-ttI"/>
                             <constraint firstAttribute="trailing" secondItem="N0o-Y4-Uc6" secondAttribute="trailing" id="Kwv-nR-zjy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N0o-Y4-Uc6" secondAttribute="bottom" id="Mk4-aP-EHs"/>
                             <constraint firstItem="N0o-Y4-Uc6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ORJ-PK-8tZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NCp-Yn-gtz" secondAttribute="bottom" constant="16" id="fb0-uh-0sm"/>
+                            <constraint firstAttribute="trailing" secondItem="NCp-Yn-gtz" secondAttribute="trailing" id="udX-6I-auK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8go-JS-F7L"/>
                     <connections>
+                        <outlet property="LoadingImageView" destination="5Az-SI-r7Y" id="4UQ-Bc-qiG"/>
+                        <outlet property="LoadingView" destination="NCp-Yn-gtz" id="VfG-GR-jae"/>
                         <outlet property="mainCollectionView" destination="N0o-Y4-Uc6" id="0k2-d4-76S"/>
                     </connections>
                 </viewController>
@@ -125,9 +148,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVi-4n-fxv">
+                                <rect key="frame" x="16" y="500" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QVi-4n-fxv" firstAttribute="leading" secondItem="Aee-TP-PGg" secondAttribute="leadingMargin" id="1L1-hZ-aDD"/>
+                            <constraint firstItem="QVi-4n-fxv" firstAttribute="top" secondItem="LPB-8N-cMI" secondAttribute="bottom" constant="18.5" id="3Ta-qL-n20"/>
                             <constraint firstItem="aR6-g3-riC" firstAttribute="top" secondItem="AxL-Kj-7E5" secondAttribute="bottom" id="65W-mB-hnz"/>
                             <constraint firstItem="LPB-8N-cMI" firstAttribute="trailing" secondItem="Aee-TP-PGg" secondAttribute="trailingMargin" id="81A-ls-ZhF"/>
                             <constraint firstItem="aR6-g3-riC" firstAttribute="centerX" secondItem="Aee-TP-PGg" secondAttribute="centerX" id="Gtr-yV-3Ix"/>
@@ -138,6 +169,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="distanceLabel" destination="QVi-4n-fxv" id="4VG-Eg-5k6"/>
                         <outlet property="eventImageView" destination="aR6-g3-riC" id="SnK-G6-MUs"/>
                         <outlet property="eventTextView" destination="LPB-8N-cMI" id="PVu-Q8-zbx"/>
                     </connections>
@@ -165,6 +197,9 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_agency" width="600" height="450"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cMN-fY-q5e"/>
     </inferredMetricsTieBreakers>

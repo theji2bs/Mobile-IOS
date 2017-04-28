@@ -44,6 +44,23 @@ class EventDao {
         
         return event
     }
+    
+    
+    
+    func createLocation(latitude: Double?, longitude: Double? ) -> EventLocation {
+        
+        let managedObjectContext = persistentContainer.viewContext
+        
+        let location = EventLocation(context: managedObjectContext)
+        
+        if let realLatitude = latitude, let realLongitude = longitude {
+            location.latitude = realLatitude
+            location.longitude = realLongitude
+        }
+        
+        return location
+        
+    }
 
     func findEvent(eventId: String) -> Event?{
         

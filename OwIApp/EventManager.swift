@@ -29,13 +29,6 @@ class EventManager {
     
     
     
-    
-    
-    
-    
-    
-    
-    
     static func retrieveAllEvent(success: @escaping ResultsEvents, failure: @escaping FailureEvents) {
         
         let url = UrlBuilder.allEvents
@@ -105,7 +98,7 @@ class EventManager {
     static func retrieveEventDetail(eventId: String, success: @escaping ResultEvent, failure: @escaping FailureEvent){
         
         let eventDao = EventDao.sharedInstance
-
+        
         guard let eventFromDatabase = eventDao.findEvent(eventId: eventId) else {
             // code réseau
             let url = UrlBuilder.event(eventId: eventId)
@@ -123,6 +116,22 @@ class EventManager {
                     
                     if event == nil {
                         event = eventDao.createEvent()
+                        
+                        if let longitude = jsonEvent["location"]["longitude"].double,
+                            let latitude = jsonEvent["location"]["latitude"].double {
+                            
+                            let location = eventDao.createLocation(latitude: latitude, longitude: longitude)
+                            event?.location = location
+                        }else {
+                            
+                            /*
+                             if let realLatitude = latitude, let realLongitude = longitude {
+                             event?.location?.latitude = realLatitude
+                             event?.location?.longitude = realLongitude
+                             }
+                             */
+                        }
+                        
                     }
                     
                     event?.fill(jsonEvent.dictionaryValue)
@@ -154,8 +163,8 @@ class EventManager {
         // code réseaux ici precedemment
     }
     
-        
-        
-}
     
+    
+}
+
 

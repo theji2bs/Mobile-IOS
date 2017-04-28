@@ -8,6 +8,7 @@
 
 import UIKit
 import Haneke
+import CoreLocation
 
 class EventDetailViewController: UIViewController {
     
@@ -15,11 +16,28 @@ class EventDetailViewController: UIViewController {
     
     @IBOutlet weak var eventTextView: UITextView!
     
+    @IBOutlet weak var distanceLabel: UILabel!
+    
+    
+    
+    private var LocationManager: CLLocationManager!
+    
+    
+    var event: Event?
+    
     var eventId: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+            LocationManager = CLLocationManager()
+            LocationManager.delegate = self
+        
+            LocationManager.requestWhenInUseAuthorization()
+            LocationManager.requestLocation()
+        
         // Do any additional setup after loading the view.
         
         eventTextView.text = ""
@@ -27,6 +45,7 @@ class EventDetailViewController: UIViewController {
         EventManager.retrieveEventDetail(eventId: eventId, success: {
             
             (event) in
+            self.event = event
             // refresh UI
             
             self.eventTextView.text = event.descriptionText
@@ -60,4 +79,18 @@ class EventDetailViewController: UIViewController {
     }
     */
 
+}
+
+extension EventDetailViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first,
+            let currentEventLocation = event?.location{
+            
+            let eventLocation = CLLocation(latitude: currentEventLocation.latitude, longitude: currentEventLocation.longitude)
+            
+            let distance = location.distance(from: eventLocation)
+            
+        }
+    }
 }
